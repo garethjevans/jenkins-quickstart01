@@ -1,0 +1,5 @@
+---
+dependencies:
+- name: "jenkins"
+  repository: "http://chartmuseum.build.cd.jenkins-x.io"
+  version: "0.10.29"
