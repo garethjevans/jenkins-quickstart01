@@ -5,7 +5,7 @@ set -u
 set -o pipefail
 
 ORG=garethjevans
-TAG=01
+TAG=$1
 
 DIRS=`find . -name 'env.yaml'`
 for DIR in ${DIRS}; do

@@ -74,7 +74,7 @@ dockerImages.each{ dockerImage ->
 
 	def sb = new StringBuilder()
 
-	plugins.each{ k,v -> 
+	plugins.sort().each{ k,v -> 
     	sb << "${k}:${v}\n"
 	}
 
