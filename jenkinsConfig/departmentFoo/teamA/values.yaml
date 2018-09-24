@@ -6,7 +6,7 @@ jenkins:
   Master:
     Name: jenkins-master
     Image: "garethjevans/jenkinsx"
-    ImageTag: "0.0.28"
+    ImageTag: "teamA_03"
     ImagePullPolicy: "IfNotPresent"
     Component: "jenkins-master"
     UseSecurity: true

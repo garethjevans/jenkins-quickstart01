@@ -20,6 +20,15 @@ for DIR in ${DIRS}; do
       docker build -t ${BUILD_TAG} .
       docker push ${BUILD_TAG}
     fi
+
+    if [ -f Chart.yaml ]; then
+      sed -i "" -e "s/ImageTag: .*/ImageTag: \"${TEAM}_${TAG}\"/" values.yaml
+      rm -fr charts
+      helm init --client-only
+      helm lint
+      helm dependency update
+      helm template .
+    fi
   popd
 
 done
